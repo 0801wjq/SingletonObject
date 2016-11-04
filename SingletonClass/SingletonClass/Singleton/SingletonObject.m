@@ -13,7 +13,7 @@ static SingletonObject *instance = nil;
 @implementation SingletonObject
 
 + (instancetype)shareObject{
-    return [[SingletonObject alloc]init];
+    return [[[self class] alloc]init];
 }
 
 + (instancetype)allocWithZone:(struct _NSZone *)zone{
